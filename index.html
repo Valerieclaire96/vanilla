@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10000</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet"  type="text/css" href="./style.css" /> 
+  </head>
+  <body>
+    <div  id="header">
+      <h1>10,000</h1>
+      <div id="rules-score">
+        <div id="rules-container" style="display:none;">
+          <h2 id="rules">Rules</h2>
+            <ul id="list-of-rules">
+              <li>Start with 6 dice, roll and check for single 1's and 5's, three or more-of-a-kinds or straights.</li>
+              <li>Hold any scoring dice you want to save. Reroll the remaining dice to try and score more during the round.</li>
+              <li>End your turn when you choose to stop and add the points to your total. 
+                If all dice are used to score, the players turn contiues and he may pick up all 6 dice and keep rolling adding points to your total.  If none of your dice can score on a roll, your turn ends and you score 0 for the round.</li>
+              <li>You must roll at least 1000 points on your first turn to keep playing.</li>
+              <li>First player to score 10,000 total points, Wins!</li>
+              </ul>
+        </div>  <!--rules-container--> 
+        <div id="scoring-container" style="display: none;">
+          <h2 id="scoring">How to score</h2>
+            <ul>
+             <p>Single</p>
+             <li>Single 5s: 50 pioints</li>
+             <li>Single 1s: 100 points</li>
+            </ul>
+            <ul>
+              <p>Three-of-a-kind:</p> 
+              <li>Three 2s: 200 points</li>
+              <li>Three 3s: 300 points</li>
+              <li>Three 4s: 400 points</li>
+              <li>Three 5s: 500 points</li>
+              <li>Three 6s: 600 points</li>
+              <li>Three 1s: 1000 points</li>
+            </ul>  
+            <ul>
+              <p>Four-of-a-kid<//p>
+              <li>Four 2s: 400 points</li>
+              <li>Four 3s: 600 points</li>
+              <li>Four 4s: 800 points</li>
+              <li>Four 5s: 1000 points</li>
+              <li>Four 6s: 1200 points</li>
+              <li>Four 1s: 2000 points</li>
+            </ul>
+            <ul>
+              <p>Five-of-a-kind:</p>
+              <li>Five 2s: 800 points</li>
+              <li>Five 3s: 1200 points</li>
+              <li>Five 4s: 1600 points</li>
+              <li>Five 5s: 2000 points</li>
+              <li>Five 6s: 2400 points</li>
+              <li>Five 1s: 4000 points</li>
+            </ul>
+            <ul>
+              <p>Six-of-a-kind:</p>
+              <li>Six 2s: 1600 points</li>
+              <li>Six 3s: 2400 points</li>
+              <li>Six 4s: 3200 points</li>
+              <li>Six 5s: 4000 points</li>
+              <li>Six 6s: 4800 points</li>
+              <li>Six 1s: 8000 points</li>
+            </ul>
+            <ul
+              <p>Striaght(1-6)</p>
+              <li>Straight: 1500 points</li>
+            </ul>
+          <ul>
+            <p>Three sets of pairs:</p>
+            <li>Three sets of pairs:  750 points</li>
+          </ul>
+            
+        </div>  <!--scoring-container--> 
+      </div>  <!--rules-score-->
+       <div id="buttons" class="container-btns">
+         <div id="rules-btn-con">
+           <button id="rules-btn" class="btn btn-warning">How to play</button>
+         </div>  <!--rules btn container-->
+         <div id="scoring-btn-con">
+          <button id="scoring-btn" class="btn btn-warning">How to score</button>
+        </div>  <!--scoring btn container-->  
+       </div>  <!--buttons-->
+    </div>  <!--header-->
+    <div id="dice-container">
+      <div class="die-container">
+          <div id="one" class="die"></div>
+            <button class="btn btn-secondary hold" id="die-one">Hold</button>
+      </div>  <!--die-1-->
+      <div class="die-container">
+        <div id="two" class="die"></div>
+        <button class="btn btn-secondary hold" id="die-two">Hold</button>
+      </div>  <!--die-2-->
+      <div class="die-container">
+        <div id="three" class="die"></div>
+        <button class="btn btn-secondary hold" id="die-three">Hold</button>
+      </div>  <!--die-3-->
+      <div class="die-container">
+        <div id="four" class="die"></div>
+       <button class="btn btn-secondary hold" id="die-four">Hold</button>
+      </div>  <!--die-4-->
+      <div class="die-container">        
+        <div id="five" class="die"></div>
+        <button class="btn btn-secondary hold" id="die-five">Hold</button>
+      </div>  <!--die-5--> 
+      <div class="die-container">
+        <div id="six" class="die"></div>
+        <button class="btn btn-secondary hold" id="die-six">Hold</button>
+      </div>  <!--die-6-->
+    </div>  <!--dice-container-->
+    
+    
+    <div id="current-score-con">
+      
+      <div id="player" class="points">
+        <h4>Player Score</h4>
+        <div id="player-score" class="points-value"></div>
+      </div>  <!--player-->
+      
+      <div id="round-score" class="points">
+        <h4>Round Score</h4>
+        <div id="round-value" class="points-value"></div>
+      </div>  <!--bank-->
+      
+      <div id="computer-score" class="points">
+        <h4>Computer Score</h4>
+        <div id="computer-score" class="points-value"></div>
+      </div>  <!--computer-->
+    
+    </div>  <!--current-score-con-->
+    
+    <div id="game-btn-con">
+      <div id="roll-btn-con">
+        <button id="roll-btn" class="btn btn-primary">Roll</button>
+      </div>   <!--roll-btn-con-->
+      <div id="bank-btn-con">
+        <button id="bank-btn" class="btn btn-primary">Bank</button>
+      </div>  <!--bank-btn-con-->
+    </div>  <!--game-btn-con-->
+  </body>
+</html>
